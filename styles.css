@@ -55,7 +55,7 @@ h2::after {
     transform: translateX(-50%);
     width: 60px;
     height: 2px;
-    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+    background: #2d3436;
 }
 
 nav {
@@ -244,18 +244,6 @@ section:nth-child(even) {
 
 #contacto {
     background: linear-gradient(to right, #fff, #f8f9fa);
-    position: relative;
-}
-
-#contacto::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 50px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1), transparent);
 }
 
 .contacto-info {
@@ -517,54 +505,35 @@ footer {
     }
 }
 
-.texto-btn {
-    color: white;
-    font-size: 0.95rem;
+.roles {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
 }
 
-.proyecto-details[open] .fa-chevron-down {
-    transform: rotate(180deg);
+.roles h4 {
+    margin: 0 0 10px 0;
+    color: #000;
+    font-size: 1em;
 }
 
-.texto-btn::before {
-    content: 'Ver más';
+.roles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.texto-btn::after {
-    content: 'Ver menos';
+.roles li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    color: #333;
 }
 
-/* Ocultar el texto original */
-.texto-btn {
-    color: transparent;
-    font-size: 0;
+.roles li i {
+    margin-right: 8px;
+    color: #0066cc;
 }
 
-.ver-mas-btn:hover {
-    background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
-}
-
-.proyecto-details[open] .ver-mas-btn::before {
-    content: 'Ver menos';
-}
-
-.ver-mas-btn::before {
-    content: 'Ver más';
-}
-
-/* Ocultar el texto original */
-.ver-mas-btn {
-    color: transparent;
-}
-
-.ver-mas-btn i {
-    color: white;
-}
-
-.proyecto-details[open] .fa-chevron-down {
-    transform: rotate(180deg);
-}
-
-.fa-chevron-down {
-    transition: transform 0.3s ease;
-} 
+ 
