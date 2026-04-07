@@ -411,6 +411,40 @@ section {
     margin: 0;
 }
 
+.contacto-cv-wrap {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0 0;
+}
+
+.btn-descargar-cv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(45, 52, 54, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-descargar-cv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 52, 54, 0.25);
+    color: #fff;
+}
+
+.btn-descargar-cv:focus-visible {
+    outline: 2px solid #1abc9c;
+    outline-offset: 3px;
+}
+
 .redes-sociales {
     grid-column: 1 / -1;
     display: flex;
@@ -537,8 +571,7 @@ section {
 
 .about-title,
 .sobre-mi .perfil-info,
-.sobre-mi .perfil-info .descripcion,
-.sobre-mi .habilidades h3 {
+.sobre-mi .perfil-info .descripcion {
     color: #2d3436;
 }
 
@@ -548,9 +581,11 @@ section {
 
 .perfil-info {
     grid-area: left;
-    text-align: left;
     margin-bottom: 0;
     max-width: 38ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sobre-mi-icon {
@@ -558,9 +593,8 @@ section {
     font-size: 6rem;
     color: #2d3436;
     filter: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.4rem;
+    margin: 0 0 1.4rem;
+    flex-shrink: 0;
 }
 
 .perfil-info .descripcion {
@@ -568,25 +602,17 @@ section {
     color: #636e72;
     line-height: 1.75;
     font-weight: 400;
+    width: 100%;
     max-width: 38ch;
     margin: 0;
     text-align: left;
     letter-spacing: 0.3px;
+    align-self: stretch;
 }
 
 .habilidades {
     grid-area: right;
     margin-top: 0;
-}
-
-.habilidades h3 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
-    color: #2d3436;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
 }
 
 .skills-cloud {
@@ -612,7 +638,6 @@ section {
     background: radial-gradient(circle at top, #23272b 0%, #161a1f 100%);
     border: 2px solid rgba(101, 180, 255, 0.8);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
-    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .skill-item:nth-child(3n + 2) {
@@ -622,10 +647,6 @@ section {
 .skill-item:nth-child(3n + 1),
 .skill-item:nth-child(3n) {
     transform: translateY(8px);
-}
-
-.skill-item:hover {
-    border-color: #ff4f81;
 }
 
 .skill-item i {
